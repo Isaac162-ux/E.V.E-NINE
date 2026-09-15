@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 80,
+  "semi": false,
+  "embeddedLanguageFormatting": "off",
+  "sortImports": {
+    "internalPattern": [
+      "^#/.*"
+    ]
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/*.md",
+    "**/.output/**",
+    "**/.nitro/**",
+    "**/.turbo/**",
+    "**/dist/**",
+    "**/pnpm-lock.yaml",
+    "**/src/routeTree.gen.ts"
+  ]
+}
