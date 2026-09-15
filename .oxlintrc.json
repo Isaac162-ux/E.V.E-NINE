@@ -1,0 +1,45 @@
+
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "env": {
+    "browser": true,
+    "es2024": true,
+    "node": true
+  },
+  "plugins": [
+    "typescript",
+    "react",
+    "eslint",
+    "unicorn",
+    "oxc"
+  ],
+  "ignorePatterns": [
+    "src/routeTree.gen.ts",
+    ".output",
+    ".nitro",
+    ".turbo",
+    "dist"
+  ],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "no-undef": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-require-imports": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/components/ui/**"
+      ],
+      "rules": {
+        "react/no-array-index-key": "off"
+      }
+    }
+  ]
+}
